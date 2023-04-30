@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial;
+            background-image: url(./lighthouse.JPG);
+            background-size: cover;
+            background-position: top;
+        }
+
+        .topbar {
+            text-align: center;
+            background-color: #88BDBC;
+            color: #88BDBC;
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+            font-size: 18px;
+        }
+
+        .tablink {
+            background-color: white;
+            color: black;
+            float: left;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 150px;
+            border: none;
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+
+        .tablink:hover {
+            background-color: black;
+            color: white;
+        }
+
+        nav {
+            background-color: white;
+            width: 100%;
+            display: flex;
+            box-shadow: 0 0 15px 0 #88BDBC;
+            margin-bottom: 20px;
+
+        }
+
+        #section1 {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .button {
+            text-align: center;
+        }
+
+        #slider {
+            overflow: hidden;
+        }
+
+        #slider figure {
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left: 0;
+            animation: 20s slider infinite;
+        }
+
+        #slider figure img {
+            width: 20%;
+            float: left;
+        }
+
+        @keyframes slider {
+            0% {
+                left: 0;
+            }
+
+            20% {
+                left: 0;
+            }
+
+            25% {
+                left: -100%
+            }
+
+            45% {
+                left: -100%;
+            }
+
+            50% {
+                left: -200%;
+            }
+
+            70% {
+                left: -200%;
+            }
+
+            75% {
+                left: -300%;
+            }
+
+            95% {
+                left: -300%;
+            }
+
+            100% {
+                left: -400%;
+            }
+        }
+
+        #title {
+            flex: 1;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+            font-size: 35px;
+            padding-top: 80px;
+            padding-bottom: 30;
+        }
+
+        .row1 {
+            padding-right: 100px;
+            padding-left: 100px;
+        }
+
+        .column1 {
+            float: left;
+            width: 50%;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 26px;
+            line-height: 30px;
+            text-align: center;
+            border-top: solid;
+            border-bottom: groove;
+            color: #black;
+        }
+
+        .row2 {
+            padding-right: 100px;
+            padding-left: 100px;
+            padding-top: 30px;
+            height: auto;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16x;
+            line-height: 30px;
+            text-align: center;
+            margin: 0;
+        }
+
+        #technique_title {
+            font-size: 30px;
+        }
+
+        .column2 {
+            float: left;
+            width: 33.33%;
+            padding-top: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            height: auto;
+            color: grey;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16x;
+            line-height: 30px;
+            text-align: justify;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        img.one {
+            height: 100%;
+            width: 100%;
+        }
+
+        img.one {
+            padding: 5px;
+            transition: transform .3s;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        img.one:hover {
+            transform: scale(1.25)
+        }
+
+        #subtitle {
+            Text-align: center;
+            color: grey;
+            font-size: 20px;
+            Padding-bottom: 40px;
+        }
+
+        .row3 {
+            padding-right: 100px;
+            padding-left: 100px;
+            text-align: center;
+            color: grey;
+            font-size: 30px;
+            padding-top: 50px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .column3 {
+            float: left;
+            width: 33.33%;
+            padding-top: 50px;
+            padding-left: 25px;
+            padding-right: 25px;
+            height: 300px;
+        }
+
+        #contact {
+            padding-top: 100px;
+            text-align: center;
+            color: #ddd;
+            text-shadow: 0 0 8px #000;
+            font-size: 25px;
+            line-height: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-image: url(IMG_0012.JPG);
+            background-size: cover;
+            background-position: bottom;
+            line-height: 2.5;
+        }
+
+        #contact .social {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+
+        #contact .social>img {
+            flex: 1;
+            max-width: 55pt;
+            margin: 16px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div id="section1">
+            <button class="tablink" onclick="openPage('Home')"><id="defaultOpen"></id>icon Slider</button>
+            <button class="tablink" onclick="openPage('Techniques')">Techniques</button>
+            <button class="tablink" onclick="openPage('Gallery')">Gallery</button>
+        </div>
+
+        <div id="section2">
+            <button class="tablink" onclick="openPage('Contact')">Contact</button>
+        </div>
+    </nav>
+
+    <section id="container">
+        <div id="Home" class="tabcontent">
+            <div id="slider">
+                <figure>
+                    <img src="flower.JPG">
+                    <img src="sunset.JPG">
+                    <img src="IMG_0047.JPG">
+                    <img src="dog.JPG">
+                    <img src="byron.JPG">
+                </figure>
+            </div>
+
+            <div id=title>
+                Photography of Byron
+            </div>
+
+            <div class="row1">
+                <div class="column1">
+                    Photography Classes $79
+                </div>
+                <div class="column1">
+                    Photo Editing Classes $59
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <section id='container'>
+        <div id="Techniques" class="tabcontent">
+            <div class="row2">
+                <div id="technique_title">
+                    Techniques
+                </div>
+                <div class="row2">
+                    The exposure triangle is a popular representation of the three variables that determine the exposure
+                    of a photograph: aperture, shutter speed, and ISO. To achieve the desired outcome, all three must be
+                    balanced, with changes to one necessitating changes to at least one of the others. They influence
+                    not only exposure but are also the most important determinants of an image's overall appearance. To
+                    gain
+                    am image with the correct exposure all three must be adjusted and set to account for the other
+                    settings brightness.
+                </div>
+                <div class="column2">
+                    <div id="subtitle">
+                        Shutterspeed
+                    </div>
+                    Shutter speed is the length of time the camera shutter is open, exposing light onto the camera
+                    sensor. Essentially, it’s how long your camera spends taking a photo. This has a few important
+                    effects on how your images will appear.
+                    <br />
+                    <br />
+                    When you use a long shutter speed (also known as a “slow” shutter speed), you end up exposing your
+                    sensor for a significant period of time. The first big effect of it is motion blur. If your shutter
+                    speed is long, moving subjects in your photo will appear blurred along the direction of motion. To
+                    overcome this issue smaller lenses are usually used to reduce the effect of movement an alternataive
+                    for when larger lenses are required is a tripod. Tripods provide a stabalized platform for the
+                    camera to sit on greatly minimalizing motion blur.
+                    Another issue faced is that photos seem too appear brighter. This is due to the sensor experiencing
+                    too much light as the lens is open for too long. Ensuring the ISO is at its lowest and the aperture
+                    is at its highest setting allows the main lens to be open for longer and be exposed with less light.
+                    Shutterspeed effects are used quite often to capture an image in motion, where a sense of speed and
+                    motion is communicated to the viewer by intentionally blurring the moving wheels.
+                    <br />
+                    <h4>
+                        fastest shutter speed
+                    </h4>
+                    <img class="one" src="shutterspeed1.jpg">
+                    <h4>
+                        slower shutter speed
+                    </h4>
+                    <img class="one" src="shutterspeed2.JPG">
+                </div>
+                <div class="column2">
+                    <div id="subtitle">
+                        ISO
+                    </div>
+                    In very basic terms, ISO is simply a camera setting that will brighten or darken a photo. As you
+                    increase your ISO number, your photos will grow progressively brighter. For that reason, ISO can
+                    help you capture images in darker environments and allows more flexibility with aperture and shutter
+                    speed settings.
+                    <br />
+                    <br />
+                    Common ISO values for cameras today range from:
+                    <ul>
+                        <li>
+                            100 - lowest
+                        </li>
+                        <li>
+                            200
+                        </li>
+                        <li>
+                            400
+                        </li>
+                        <li>
+                            800
+                        </li>
+                        <li>
+                            1600
+                        </li>
+                        <li>
+                            3200
+                        </li>
+                        <li>
+                            6400 - highest
+                        </li>
+                    </ul>
+                    the higher the value of the ISO the more grainy the photo will turn out. to reduce the amount of
+                    grain or noise within a photo either increase the shutter speed or decreas the aperture. Be sure to
+                    use these only if the photo isn't affected (when increasing the shutter speed to brighten a photo be
+                    sure that the scene of the photo is still as motion blur may occur). On
+                </div>
+                <div class="column2">
+                    <div id="subtitle">
+                        Aperture
+                    </div>
+                    The opening in a lens through which light passes to enter the camera is referred to as an aperture.
+                    It's a simple concept to understand if you consider how your eyes work. The iris in your eyes
+                    expands or contracts as you move between bright and dark places, controlling the size of your pupil.
+                    The aperture is the term given to the lens's "pupil" in photography. You can change the aperture
+                    size to allow more or less light to reach your camera sensor. Aperture is an adjustable lens opening
+                    that controls the amount of light that enters the camera. An f-stop number, often known as an
+                    f-number, is used to calculate aperture. The greater the number, the smaller the aperture, resulting
+                    in less light reaching the lens. The lower the f stop number, the higher the number. The f-number
+                    often ranges from f/1.4, which allows for more light exposure, to f/16, which allows for the least
+                    amount of light exposure. f/16 lenses are developed for landscape, architecture, and macro
+                    photography when a lot of depth of field is required.
+                    <br />
+                    <br />
+                    The following images show how aperture changes the appeal of a potograph.
+                    <h4>
+                        f16
+                    </h4>
+                    <img class="one" src="aperture_one.JPG">
+                    <h4>
+                        f5.4
+                    </h4>
+                    <img class="one" src="aperture_two.JPG">
+
+                </div>
+            </div>
+    </section>
+
+    <div id="Gallery" class="tabcontent">
+        <div id='gallery'>
+
+            <div class="row3">
+                <p>
+                    Gallery
+                </p>
+                <div class="column3">
+                    <div class="photos">
+                        <img class="one" src="IMG_0009.JPG">
+                        <img class="one" src="flower.JPG">
+                        <img class="one" src="IMG_0010.JPG">
+                        <img class="one" src="IMG_0011.JPG">
+                        <img class="one" src="IMG_0014.JPG">
+                        <img class="one" src="IMG_0017.JPG">
+                        <img class="one" src="IMG_0019.JPG">
+                        <img class="one" src="IMG_0049.JPG">
+                    </div>
+                </div>
+                <div class="column3">
+                    <div class="photos">
+                        <img class="one" src="IMG_0056.JPG">
+                        <img class="one" src="IMG_0622.JPG">
+                        <img class="one" src="IMG_0321.JPG">
+                        <img class="one" src="aperture_two.JPG">
+                        <img class="one" src="IMG_0633.JPG">
+                        <img class="one" src="IMG_0672.JPG">
+                        <img class="one" src="IMG_0697.JPG">
+                    </div>
+                </div>
+                <div class="column3">
+                    <div class="photos">
+                        <img class="one" src="IMG_0888.JPG">
+                        <img class="one" src="sunset.JPG">
+                        <img class="one" src="dog.JPG">
+                        <img class="one" src="IMG_0047.JPG">
+                        <img class="one" src="byron.JPG">
+                        <img class="one" src="IMG_0630.JPG">
+                        <img class="one" src="IMG_2820.JPG">
+                        <img class="one" src="IMG_0700.JPG">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+
+    <div id="Contact" class="tabcontent">
+        <div id='contact'>
+
+            <h2>Contact us</h2>
+            <h4>Photography of Byron</h4>
+
+            <p>
+
+                <span><b>Phone: </b> 1800 123 456</span>
+                <br />
+                <span><b>Email: </b>name@photographyofbyron.com.au</span>
+                <br />
+                <span><b>Socials:</b></span>
+            </p>
+
+            <div class="social">
+                <img src="./instagram_logo.png" />
+                <img src="./twitter_logo.png" />
+                <img src="./facebook_logo.png" />
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+
+</html>
